@@ -2,7 +2,7 @@
 
 以下为接入配置的步骤。
 ## 配置流程
-### IOS动作/光线活体：使用 Cocoapod 集成
+### 使用 Cocoapod 集成
 WeBankService SDK 最低支持到 iOS9.0，请在构建项目时候注意，目前仅支持 Xcode11.0及更高版本编译。
 以下为接入配置的步骤：
 1. 将 TencentCloudHuiyanSDKFace_framework 文件夹拷贝到自己项目的 podfile 文件所在的同一目录。
@@ -21,7 +21,7 @@ Privacy - Camera Usage Description
 Privacy - Microphone Usage Description
 ```
 
-### IOS 动作数字光线活体：直接引用 framework
+### 直接引用 framework
 WeBankService SDK 最低支持到 iOS9.0，请在构建项目时候注意。
 以下为接入配置的步骤：
 1. 引用以下资源文件到项目：
@@ -55,6 +55,7 @@ Accelerate.framework
 WebKit.framework
 libc++.tbd
 libz.tbd
+videoToolbox.framework
 ```
 3. SDK 需要使用相机权限，请在 info.plist 中添加：
 ```
@@ -85,17 +86,17 @@ NONCE 类型的 ticket，其有效期为120秒，且一次性有效，即每�
 /*
 意愿性SDK入口，注意传入的faceId不能为空
 
-@param userid 用户唯一标识, 由合作方自行定义（具体要求，参考word接入文档）
-@param nonce  满足接入要求的32位随机数（具体要求，参考word接入文档）
-@param sign 满足接入要求的40位签名值（具体要求，参考word接入文档）
+@param userid 用户唯一标识, 由合作方自行定义（具体要求，参考接入文档）
+@param nonce  满足接入要求的32位随机数（具体要求，参考接入文档）
+@param sign 满足接入要求的40位签名值（具体要求，参考接入文档）
 @param appid 腾讯服务分配的appid
 @param orderNo 每次人脸身份认证请求的唯一订单号: 建议为32位字符串(不超过32位)
 @param apiVersion 后台api接口版本号(不是SDK的版本号),默认请填写@"1.0.0"
 @param licence 腾讯给合作方派发的前端使用的licence(该licence同app当前使用的bundle id绑定)
-@param faceId 合作方必须要先获取*增强级*faceId，再送入sdk，不允许为空(参考word接入文档)
+@param faceId 合作方必须要先获取*增强级*faceId，再送入sdk，不允许为空(参考接入文档)
 @param sdkConfig SDK基础配置项目
 @param success 服务登录成功回调,登录成功以后开始进行活体和检测服务
-@param failure 服务登录失败回调,具体参考错误码文档(参考word接入文档)
+@param failure 服务登录失败回调,具体参考错误码文档(参考接入文档)
 */
 -(void)initWillSDKWithUserId:(NSString *)userid
                    nonce:(NSString *)nonce
@@ -191,6 +192,12 @@ SDK 登录接口 initSDK 方法中需要传入 WBFaceVerifySDKConfig 字段
  默认为NO
  */
 @property (nonatomic, assign) BOOL useWindowSecene;
+
+/*
+意愿性表达视频录制参数
+*/
+@property (nonatomic, assign) BOOL recordWillVideo;
+@property (nonatomic, assign) BOOL checkWillVideo;
 
 /**
  默认sdk配置

@@ -1,54 +1,51 @@
-## Table of contents
+## Namespaces（命名空间）
+- [&quot;pts/url&quot;](https://cloud.tencent.com/document/product/1484/75837)
 
-### Namespaces
+### Interfaces（接口）
+- [URL](https://cloud.tencent.com/document/product/1484/75825)
+- [URLSearchParams](https://cloud.tencent.com/document/product/1484/75827)
 
-- [&quot;pts/url&quot;](url._pts_url_.md)
 
-### Interfaces
+## Variables（变量）
 
-- [URL](../interfaces/url.URL.md)
-- [URLSearchParams](../interfaces/url.URLSearchParams.md)
-
-### Variables
-
-- [URL](#url)
-- [URLSearchParams](#urlsearchparams)
-
-## Variables
-
-<span id="url"></span>
-
+[](id:url)
 ### URL
 
-• **URL**: `Object`
+URL: { prototype: [URL](https://cloud.tencent.com/document/product/1484/75825); createObjectURL: *any*; revokeObjectURL: *any* }
+
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `prototype` | [`URL`](url.md#url) |
-| `createObjectURL` | (`obj`: `Blob` \| `MediaSource`) => `string` |
-| `revokeObjectURL` | (`url`: `string`) => `void` |
+- ##### prototype: [URL](https://cloud.tencent.com/document/product/1484/75825)
 
-#### Defined in
+- ##### createObjectURL:function
+- createObjectURL(obj: *Blob* | *MediaSource*): *string* 
 
-node_modules/typescript/lib/lib.dom.d.ts:14358
+ **Parameters**
 
-___
+   - ##### obj: *Blob* | *MediaSource*
 
-<span id="URLSearchParams"></span>
+  Returns *string*
+
+  ##### revokeObjectURL:function
+
+   - revokeObjectURL(url: *string*): *void*
+  
+ **Parameters**
+
+  - ##### url: *string*
+
+ #### Returns *void*
+
+
 
 ### URLSearchParams
+URLSearchParams: { prototype: [URLSearchParams](https://cloud.tencent.com/document/product/1484/75827); toString: *any* }
 
-• **URLSearchParams**: `Object`
 
 #### Type declaration
+- prototype: [URLSearchParams](https://cloud.tencent.com/document/product/1484/75827)
+- toString:function
+- toString(): *string*
 
-| Name | Type |
-| :------ | :------ |
-| `prototype` | [`URLSearchParams`](url.md#urlsearchparams) |
-| `toString` | () => `string` |
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:14387
+ Returns *string*

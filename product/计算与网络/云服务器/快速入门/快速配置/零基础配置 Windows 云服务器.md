@@ -16,7 +16,7 @@
 <div style="background-color:#00A4FF; width: 190px; height: 35px; line-height:35px; text-align:center;"><a href="https://buy.cloud.tencent.com/cvm?tab=lite" target="_blank"  style="color: white; font-size:16px;" hotrep="document.guide.2764.btn2">点此进入快速购买页面</a></div>
 </br>
 
-![](https://qcloudimg.tencent-cloud.cn/raw/4b22f83f4a93338b8a654788a4b0b317.png)
+![](https://qcloudimg.tencent-cloud.cn/raw/9e106e722a84b850dfe0f848b877a19e.png)
 
 配置说明如下：
 <table>
@@ -66,7 +66,8 @@
 </tr>
 </table>
 
-单击**立即购买**，并付费完成后，即完成了云服务器的购买。云服务器可以作为个人虚拟机或者您建站的服务器。接下来，您可以登录您购买的这台服务器。
+单击**立即购买**，并付费完成后，即完成了云服务器的购买。
+云服务器可以作为个人虚拟机或者您建站的服务器。接下来，您可以登录您购买的这台服务器。
 
 
 

@@ -24,14 +24,6 @@
 | [setXmagicStreamType](#setxmagicstreamtype)                  | 设置输入数据类型，默认 Android camera 数据流。               |
 | [setXmagicLogLevel](#setxmagicloglevel)                      | 设置 SDK 的 log 等级，建议开发调试时设为 `Log.DEBUG`，正式发布时设置为 `Log.WARN`，如果正式发布设置为 `Log.DEBUG`，大量的日志会影响性能。<br><b>在 new XmagicApi() 之后调用。</b> |
 
-## 静态函数
-
-| API               | 描述         |
-| ----------------- | ---------- |
-| [setLibPathAndLoad](#setlibpathandload) | 设置 libPath。 |
-
-## Public 成员函数说明
-
 ### XmagicApi
 
 构造函数。
@@ -121,7 +113,7 @@ void updateProperty(XmagicProperty<?> p)
 <td>ID</td>
 <td>null
 <br>特殊情况：<ul style="margin:0">
-<li/>瘦脸中的  （自然、女神、英俊） ID 值分别为：<code>XmagicConstant.BeautyConstant.BEAUTY_FACE_NATURE</code>、<code>XmagicConstant.BeautyConstant.BEAUTY_FACE_GODNESS </code>、<code>XmagicConstant.BeautyConstant.BEAUTY_FACE_MALE_GOD</code></li>
+<li/>瘦脸中的（自然、女神、英俊） ID 值分别为：<code>BeautyConstant.BEAUTY_FACE_NATURE_ID</code>、 <code>BeautyConstant.BEAUTY_FACE_FEMALE_GOD_ID</code>、<code>BeautyConstant.BEAUTY_FACE_MALE_GOD_ID</code></li>
 <li>口红中的 ID 值为：<code>XmagicConstant.BeautyConstant.BEAUTY_LIPS_LIPS_MASK</code></li>
 <li>腮红中的 ID 值为：<code>XmagicConstant.BeautyConstant.BEAUTY_MAKEUP_MULTIPLY_MULTIPLY_MASK</code></li>
 <li>立体中的 ID 值为：<code>XmagicConstant.BeautyConstant.BEAUTY_SOFTLIGHT_SOFTLIGHT_MASK</code></li>        
@@ -145,7 +137,7 @@ void updateProperty(XmagicProperty<?> p)
 <thead><tr><th width=15%>属性字段</th><th>说明</th></tr></thead>
 <tbody><tr>
 <td>category</td>
-<td>Category.BEAUTY  </td>
+<td>Category.BODY_BEAUTY</td>
 </tr>
 <tr>
 <td>ID</td><td>null</td>
@@ -167,15 +159,20 @@ void updateProperty(XmagicProperty<?> p)
 <thead><tr><th width=15%>属性字段</th><th>说明</th></tr></thead>
 <tbody><tr>
 <td>category</td>
-<td>Category.BEAUTY  </td>
+<td>Category.LUT</td>
 </tr>
 <tr>
 <td>ID</td>
-<td>图片名称，必填<br>示例：<code>dongjing_lf.png</code></td>
+<td>图片名称，必填
+<ul style="margin:0">
+<li>示例：<code>dongjing_lf.png</code>
+<li>“无” ID 为 <code>XmagicProperty.ID_NONE</code>
+</ul>
+</td>
 </tr>
 <tr>
 <td>resPath</td>
-<td>滤镜图片路径，必填<br>示例：“无”设置为 null</td>
+<td>滤镜图片路径，必填，“无”设置为 null</td>
 </tr>
 <tr>
 <td>effkey</td>
@@ -195,7 +192,12 @@ void updateProperty(XmagicProperty<?> p)
 </tr>
 <tr>
 <td>ID</td>
-<td>资源文件夹名称，必填<br>示例：<code>video_lianliancaomei</code></td>
+<td>资源文件夹名称，必填
+<ul style="margin:0">
+<li>示例：<code>video_lianliancaomei</code>
+<li>“无” ID 为 <code>XmagicProperty.ID_NONE</code>
+</ul>
+</td>
 </tr>
 <tr>
 <td>resPath</td>
@@ -219,7 +221,11 @@ void updateProperty(XmagicProperty<?> p)
 </tr>
 <tr>
 <td>ID</td>
-<td>资源文件夹名称，必填<br><code>示例：video_xuejiezhuang<code></td>
+<td>资源文件夹名称，必填
+<ul style="margin:0">
+<li><code>示例：video_xuejiezhuang</code>
+<li>“无” ID 为 <code>XmagicProperty.ID_NONE</code>
+</ul></td>
 </tr>
 <tr>
 <td>resPath</td>
@@ -227,7 +233,8 @@ void updateProperty(XmagicProperty<?> p)
 </tr>
 <tr>
 <td>effkey</td>
-<td>必填，取值为：makeup.strength，“无”设置为 null</td>
+<td>必填，取值为：<code>makeup.strength</code>
+	<br>“无”设置为 null</td>
 </tr>
 <tr>
 <td>effValue</td>
@@ -243,8 +250,13 @@ void updateProperty(XmagicProperty<?> p)
 </tr>
 <tr>
 <td>ID</td>
-<td>资源文件夹名称，必填<br>示例：<code>video_segmentation_blur_45</code>
-<br>自定义分割 ID 值必须使用：<code>XmagicConstant.SegmentationId.CUSTOM_SEG_ID</code></td>
+<td>资源文件夹名称，必填
+<ul style="margin:0">
+<li>示例：<code>video_segmentation_blur_45</code>
+<li>“无” ID 为 <code>XmagicProperty.ID_NONE</code>
+<li>自定义分割 ID 值必须使用：<code>XmagicConstant.SegmentationId.CUSTOM_SEG_ID</code>
+</ul>
+</td>
 </tr>
 <tr>
 <td>resPath</td>
@@ -566,7 +578,11 @@ void setXmagicStreamType(int type)
 
 ------
 
-## 静态函数说明
+## 静态函数
+
+| API               | 描述         |
+| ----------------- | ---------- |
+| [setLibPathAndLoad](#setlibpathandload) | 设置 libPath。 |
 
 ### setLibPathAndLoad
 

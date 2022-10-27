@@ -1,38 +1,14 @@
-# Interface: Certificate
-
-[global](../modules/global.md).Certificate
-
-## Table of contents
-
-### Properties
-
-- [cert](#cert)
-- [key](#key)
-
-## Properties
-
-<span id="cert"></span>
-
+## 属性（Properties）
+[](id:cert)
 ### cert
-
-• **cert**: `string`
-
+**cert**: `string`
 证书
 
-#### Defined in
-
-typings/global.d.ts:411
-
-___
-
-<span id="key"></span>
-
+[](id:key)
 ### key
+**key**: `string`
 
-• **key**: `string`
 
-私钥
 
-#### Defined in
 
-typings/global.d.ts:415
+

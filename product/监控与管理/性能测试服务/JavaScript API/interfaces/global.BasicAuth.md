@@ -1,28 +1,13 @@
-[global](../modules/global.md).BasicAuth
-
-## Table of contents
-
-### Properties
-- [password](#password)
-- [username](#username)
-
-## Properties
-<span id="password"></span>
-
+## Properties（属性）
+[](id:password)
 ### password
-- **password**: `string`
+**password**: `string`
 密码
 
-#### Defined in
-typings/global.d.ts:389
-
-___
-
-<span id="username"></span>
-
+[](id:username)
 ### username
-- **username**: `string`
+**username**: `string`
 用户名
 
-#### Defined in
-typings/global.d.ts:385
+
+
